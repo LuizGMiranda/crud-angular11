@@ -1,5 +1,6 @@
 .sidenav {
     background-color: #3F51B5;
+    position: absolute;
     width: 200px;
 }
 
