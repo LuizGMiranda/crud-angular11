@@ -19,6 +19,9 @@ import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
 import { ClientsCrudComponent } from './views/clients-crud/clients-crud.component';
 import { ClientCreateComponent } from './components/client/client-create/client-create.component';
+import { ClientReadComponent } from './components/client/client-read/client-read.component';
+import { CPFPipe } from './pipes/cpf.pipe';
+import { PhoneNumberPipe } from './pipes/phone-number.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { ClientCreateComponent } from './components/client/client-create/client-
     NavComponent,
     HomeComponent,
     ClientsCrudComponent,
-    ClientCreateComponent
+    ClientCreateComponent,
+    ClientReadComponent,
+    CPFPipe,
+    PhoneNumberPipe
   ],
   imports: [
     BrowserModule,

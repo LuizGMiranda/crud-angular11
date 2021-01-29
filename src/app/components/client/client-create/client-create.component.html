@@ -7,10 +7,10 @@
             <input matInput placeholder="Nome" [(ngModel)]="client.name" name="name">
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Telefone" [(ngModel)]="client.phone" name="phone">
+            <input matInput placeholder="Celular" [ngModel]="client.phone | phoneNumber" (ngModelChange)="client.phone=$event" name="phone">
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="CPF" [(ngModel)]="client.cpf" name="cpf">
+            <input maxlength="11" matInput placeholder="CPF" [ngModel]="client.cpf | CPF" (ngModelChange)="client.cpf=$event" name="cpf">
         </mat-form-field>
         <span>Endereço</span>
         <mat-form-field>

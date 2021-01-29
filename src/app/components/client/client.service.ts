@@ -26,6 +26,10 @@ export class ClientService {
         return this.http.post<Client>(`${this.URI_BASE}/clients`, client);
     }
 
+    read(): Observable<Client[]> {
+        return this.http.get<Client[]>(`${this.URI_BASE}/clients/`)
+    }
+
     getSates(): Observable<any> {
         return this.http.get(`${this.URI_IGBE}/localidades/estados`)
     }

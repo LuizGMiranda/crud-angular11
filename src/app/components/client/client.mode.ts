@@ -1,6 +1,6 @@
 export interface Client {
     name: string
-    phone: number | null
+    phone: string
     cpf: string
     address: {
         state: string
