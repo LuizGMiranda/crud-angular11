@@ -12,7 +12,7 @@
         <mat-form-field>
             <input maxlength="11" matInput placeholder="CPF" [ngModel]="client.cpf | CPF" (ngModelChange)="client.cpf=$event" name="cpf">
         </mat-form-field>
-        <span>Endereço</span>
+        <span class="subtitle">Endereço</span>
         <mat-form-field>
             <input matInput placeholder="CEP" [(ngModel)]="client.address!.postalCode" name="postalCode" (change)="onChangePostalCode()">
         </mat-form-field>
@@ -34,7 +34,7 @@
         <mat-form-field>
             <input matInput placeholder="Complemento" [(ngModel)]="client.address!.complement" name="complement">
         </mat-form-field>
-        <span>Produtos</span>
+        <span class="subtitle">Produtos</span>
         <ul *ngIf="showListItens">
             <li *ngFor="let product of client.itens">
                 {{ product.name }} - {{ product.price | currency }}

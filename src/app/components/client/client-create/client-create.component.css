@@ -15,3 +15,9 @@ form .new-product-input {
 form .new-product-button {
     height: 40px;
 }
+
+form .subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
