@@ -38,7 +38,7 @@
         <ul *ngIf="showListItens">
             <li *ngFor="let product of client.itens">
                 {{ product.name }} - {{ product.price | currency }}
-                <span (click)="removeProduct(product.code)">[remove]</span>
+                <span class="product-item-remove" (click)="removeProduct(product.code)">(remover produto)</span>
             </li>
         </ul>
         <div class="new-product-group">
@@ -51,8 +51,8 @@
             <button class="new-product-button" mat-stroked-button (click)="addProduct()" color="secundary">Adicionar produto</button>
         </div>
     </form>
-    <button mat-raised-button (click)="createClient()" color="primary">Criar cliente</button>
-    <button mat-raised-button (click)="cancel()">Cancelar</button>
+    <button class="button" mat-raised-button (click)="createClient()" color="primary">Criar cliente</button>
+    <button class="button" mat-raised-button (click)="cancel()">Cancelar</button>
 </mat-card>
 
 

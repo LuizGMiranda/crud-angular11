@@ -1,6 +1,17 @@
+.button {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
 form {
     display: flex;
     flex-direction: column;
+}
+
+form .product-item-remove {
+    color: tomato;
+    font-size: 12px;
+    font-weight: 500;
 }
 
 form .new-product-group {
