@@ -34,6 +34,22 @@
         <mat-form-field>
             <input matInput placeholder="Complemento" [(ngModel)]="client.address!.complement" name="complement">
         </mat-form-field>
+        <span>Produtos</span>
+        <ul *ngIf="showListItens">
+            <li *ngFor="let product of client.itens">
+                {{ product.name }} - {{ product.price | currency }}
+                <span (click)="removeProduct(product.code)">[remove]</span>
+            </li>
+        </ul>
+        <div class="new-product-group">
+            <mat-form-field class="new-product-input">
+                <input matInput placeholder="Nome do produto" [(ngModel)]="newItens.name" name="productName">
+            </mat-form-field>
+            <mat-form-field  class="new-product-input">
+                <input matInput placeholder="Valor do produto" [(ngModel)]="newItens.price" name="productPrice">
+            </mat-form-field>
+            <button class="new-product-button" mat-stroked-button (click)="addProduct()" color="secundary">Adicionar produto</button>
+        </div>
     </form>
     <button mat-raised-button (click)="createClient()" color="primary">Criar cliente</button>
     <button mat-raised-button (click)="cancel()">Cancelar</button>

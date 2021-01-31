@@ -12,8 +12,8 @@ export interface Client {
     itens?: Itens[]
 }
 
-interface Itens {
+export interface Itens {
     name: string
-    price: number
+    price: number | null
     code: number
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Client } from '../client.mode';
+import { Client, Itens } from '../client.mode';
 import { ClientService } from "../client.service";
 
 @Component({
@@ -33,10 +33,18 @@ export class ClientCreateComponent implements OnInit {
             postalCode: null,
             street: '',
             complement: ''
-        }
+        },
+        itens: []
     }
 
-    constructor(private clientService: ClientService, private router: Router) { }
+    newItens: any = {};
+
+    showListItens = this.client.itens?.length || 0
+
+
+
+    constructor(private clientService: ClientService, private router: Router) {
+    }
 
     ngOnInit(): void {
         this.clientService.getSates().subscribe((resp) => {
@@ -73,5 +81,24 @@ export class ClientCreateComponent implements OnInit {
             this.selectedCity = resp.localidade
             this.client.address.street = resp.logradouro
         })
+    }
+
+    addProduct(): void {
+        const item = {
+            code: Math.random(),
+            name: this.newItens.name,
+            price: this.newItens.price
+        };
+        this.client.itens?.push(item);
+        this.newItens.name = '';
+        this.newItens.price = 0;
+        this.showListItens = this.client.itens?.length || 0
+    }
+
+    removeProduct(code: number): void {
+        this.client.itens = this.client.itens?.filter((item) => {
+            return item.code !== code
+        })
+        this.showListItens = this.showListItens -1
     }
 }

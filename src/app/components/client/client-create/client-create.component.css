@@ -2,3 +2,16 @@ form {
     display: flex;
     flex-direction: column;
 }
+
+form .new-product-group {
+    display: flex;
+    flex-direction: row;
+}
+
+form .new-product-input {
+    margin-right: 10px;
+}
+
+form .new-product-button {
+    height: 40px;
+}
