@@ -38,6 +38,10 @@ export class ClientService {
         return this.http.put<Client>(`${this.URI_BASE}/clients/${client.id}`, client)
     }
 
+    delete(id: string): Observable<Client> {
+        return this.http.delete<Client>(`${this.URI_BASE}/clients/${id}`)
+    }
+
     getSates(): Observable<any> {
         return this.http.get(`${this.URI_IGBE}/localidades/estados`)
     }
