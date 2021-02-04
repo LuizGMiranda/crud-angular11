@@ -25,6 +25,10 @@ import { ClientCreateComponent } from './components/client/client-create/client-
 import { ClientReadComponent } from './components/client/client-read/client-read.component';
 import { CPFPipe } from './pipes/cpf.pipe';
 import { PhoneNumberPipe } from './pipes/phone-number.pipe';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { ClientUpdateComponent } from './components/client/client-update/client-update.component';
 
 registerLocaleData(localePt, 'pt');
 @NgModule({
@@ -37,7 +41,8 @@ registerLocaleData(localePt, 'pt');
     ClientCreateComponent,
     ClientReadComponent,
     CPFPipe,
-    PhoneNumberPipe
+    PhoneNumberPipe,
+    ClientUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +58,9 @@ registerLocaleData(localePt, 'pt');
     MatFormFieldModule,
     MatInputModule,
     HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   providers: [
     {

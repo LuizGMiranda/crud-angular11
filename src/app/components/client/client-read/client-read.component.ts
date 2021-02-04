@@ -9,6 +9,7 @@ import { ClientService } from '../client.service';
 })
 export class ClientReadComponent implements OnInit {
     clients: Client[];
+    displayedColumns = ['id', 'name', 'action'];
 
     constructor(private clientService: ClientService) {
         this.clients = []
