@@ -14,6 +14,7 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
+import { MatDialogModule } from "@angular/material/dialog";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +30,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { ClientUpdateComponent } from './components/client/client-update/client-update.component';
+import { ModalDeleteComponent } from './components/template/modal-delete/modal-delete.component';
 
 registerLocaleData(localePt, 'pt');
 @NgModule({
@@ -42,7 +44,8 @@ registerLocaleData(localePt, 'pt');
     ClientReadComponent,
     CPFPipe,
     PhoneNumberPipe,
-    ClientUpdateComponent
+    ClientUpdateComponent,
+    ModalDeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +64,7 @@ registerLocaleData(localePt, 'pt');
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatDialogModule,
   ],
   providers: [
     {

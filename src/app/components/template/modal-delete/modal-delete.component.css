@@ -1,0 +1,8 @@
+.modal-delete-client {
+    text-align: center;
+}
+
+.modal-delete-client .actions {
+    display: flex;
+    justify-content: center;
+}
