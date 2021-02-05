@@ -1,0 +1,24 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "name": "Luiz",
+      "phone": "48998333270",
+      "cpf": "09808908969",
+      "address": {
+        "state": "SC",
+        "city": "Palhoça",
+        "postalCode": 88103622,
+        "street": "Rua Natalino",
+        "complement": "Casa"
+      },
+      "itens": [
+        {
+          "code": 0.41234901841281935,
+          "name": "Sapato",
+          "price": "100"
+        }
+      ]
+    }
+  ]
+}

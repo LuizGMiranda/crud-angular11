@@ -1,27 +1,42 @@
-# TestFront
+# Teste técnico Front-end
+Tecnologia: Javascript/Typescript
+Framework: Angular 11 (com ng cli)
+Design: Material Design
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
+## Problema
+Realizar o cadastro de clientes de uma loja, obrigatoriamente todo cliente deve ter nome, telefone e documento e opcionalmente o endereço (uf, município, cep, rua e complemento). Realizar o vínculo de um cliente a itens, os itens devem ter pelo menos nome, preço e código.
 
-## Development server
+Precisamos de uma interface que resolva as seguintes questões abaixo:
+1. Lista de clientes
+2. Cadastro de cliente
+3. Editar um cliente
+4. Apagar um cliente
+5. Visualizar o detalhe de um cliente com os itens
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Serviços utilizados
+- API Estados - https://servicodados.ibge.gov.br/api/v1/localidades/estados
+- API Municipios por UF - https://servicodados.ibge.gov.br/api/v1/localidades/estados/{UF}/municipios
+- API CEP - http://viacep.com.br/
 
-## Code scaffolding
+## API Fake
+Foi utilizado para desenvolvimento a lib [json-server](https://link) com o json [db.json](./db.json)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Iniciar o projeto
+Fazer o clone do projeto
 
-## Build
+```
+git clone https://github.com/LuizGMiranda/crud-angular11.git
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Entrar e instalar pacotes
 
-## Running unit tests
+```
+cd crud-angular11
+npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Iniciar o projeto
+```
+npm run start
+```
+Acessar a url [localhost:4200](http://localhost:4200)
