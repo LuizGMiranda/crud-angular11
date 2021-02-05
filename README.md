@@ -40,3 +40,8 @@ Iniciar o projeto
 npm run start
 ```
 Acessar a url [localhost:4200](http://localhost:4200)
+
+## Roadmap
+Próximas melhorias:
+- Utilizar o `.pipe()` para exibir mensagens de erro referente a API
+- Melhorar componentes de tabelas
